@@ -1,0 +1,229 @@
+/* ======== Configurações gerais ======== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Recuo do parágrafo */
+p {
+    text-indent: 25px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+/* ======== Cabeçalho ======== */
+
+header {
+    width: 100%;
+    padding: 60px 20px;
+    background: #000;
+    color: #fff;
+    position: relative; 
+    text-align: center;
+}
+
+
+/* Texto centralizado no topo */
+.header-center {
+    text-align: center;
+}
+
+/* FOTO NA DIREITA */
+.profile-photo {
+    position: absolute;
+    top: 50%;
+    right: 30px;        
+    transform: translateY(-50%); 
+}
+
+/* Estilo da foto */
+.profile-photo img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 20px rgba(255,255,255,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* animação suave */
+.profile-photo img:hover {
+    transform: scale(1.07); /* Zoom leve, sem mexer na posição */
+    box-shadow: 0 0 25px rgba(255,255,255,0.35);
+}
+
+
+
+/* Substituir qualquer style antigo que usava header flex */
+.header-container, .header-text {
+    display: unset !important;
+}
+
+header p {
+    text-align: center !important;
+    text-indent: 0 !important;
+}
+
+.nome-animado {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nome-animado:hover {
+    animation: crescer 0.6s ease-in-out forwards;
+}
+
+@keyframes crescer {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+
+
+/* ======== Seções ======== */
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.section {
+    margin: 60px 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-left: 4px solid #000;
+    padding-left: 10px;
+}
+
+/* ======== Habilidades ======== */
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-grid span {
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: transform 0.2s ease;
+}
+
+.skills-grid span:hover {
+    transform: scale(1.05);
+}
+
+/* ======== Projetos ======== */
+
+.projects-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+/* ======== Contatos ======== */
+
+.email {
+    color: #000;
+    font-weight: bold;
+}
+
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    margin-right: 15px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* ======== Rodapé ======== */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    background: #000;
+    color: #fff;
+}
+
+/* ======== Animações ======== */
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1s forwards;
+}
+
+.fade-in-delay {
+    opacity: 0;
+    animation: fade-in 1.5s forwards;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-up 1s forwards;
+}
+
+@keyframes fade-in {
+    to { opacity: 1; }
+}
+
+@keyframes fade-up {
+    to { opacity: 1; transform: translateY(0); }
+}
